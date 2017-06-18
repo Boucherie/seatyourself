@@ -42,22 +42,28 @@ Restaurant.create(
   name: 'Bench',
   address: 'King',
   capacity: 50,
-  open_time: 12,
-  close_time: 23,
+  open_time: 12.00,
+  close_time: 23.00,
   reservations_id: 1,
   owner_id: 1,
-  url: 'http://i.imgur.com/AuyOIa4b.jpg'
+  url: 'http://i.imgur.com/AuyOIa4b.jpg',
+  price_range: '$$',
+  neighbourhood: 'Downtown',
+  summary: 'Fun food. Canadian food. From poutine to hamburgers.'
 )
 
 Restaurant.create(
   name: 'Eat it!',
   address: 'Queen',
   capacity: '25',
-  open_time: 10,
-  close_time: 17,
+  open_time: 17.30,
+  close_time: 00,
   reservations_id: 2,
   owner_id: 2,
-  url: 'http://i.imgur.com/w8QyKOub.jpg'
+  url: 'http://i.imgur.com/w8QyKOub.jpg',
+  price_range: '$$$',
+  neighbourhood: 'Downtown',
+  summary: 'Fancy food. Wince cellar, $100 dollar foie gras spaghetti.'
 )
 
 Restaurant.create(
@@ -65,10 +71,13 @@ Restaurant.create(
   address: 'Bloor',
   capacity: '100',
   open_time: 00,
-  close_time: 10,
+  close_time: 10.15,
   reservations_id: 3,
   owner_id: 3,
-  url: 'http://i.imgur.com/Kv43rafb.jpg'
+  url: 'http://i.imgur.com/Kv43rafb.jpg',
+  price_range: '$',
+  neighbourhood: 'Midtown',
+  summary: 'Cheap eats. Mac and cheese, burgers, hot dogs, sandwhiches. Come hungry!'
 )
 
 Reservation.create(
