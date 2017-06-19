@@ -7,10 +7,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user.user_params
-    @user = User.new(user_params)
+    @user = User.new
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
     if @user.save
-      redirect_to "/restaurants"
+      redirect_to root_url
     else
       render :new
     end
@@ -29,7 +31,9 @@ class UsersController < ApplicationController
       redirect_to root_url and return
     end
 
-    @user.user_params
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
       flash[:notice] = "Info Updated"
@@ -46,7 +50,5 @@ private
     @user = current_user
   end
 
-  def user_params
-    (params.require(:user).permit(:email, :passoword, :password_confirmation)
-  end
+
 end

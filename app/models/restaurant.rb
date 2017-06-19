@@ -6,5 +6,5 @@ class Restaurant < ApplicationRecord
 
   validates :capacity, numericality: { only_interger: true }
 
-  validates: :url, uniqueness: true
+  validates :url, uniqueness: true
 end
