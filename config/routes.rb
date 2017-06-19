@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :restaurants
     resources :reservations
 
+  post 'users' => 'users#create'
+  get 'users/new' => 'users#new'
 end
