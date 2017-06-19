@@ -1,6 +1,6 @@
 <div class="restaurant">
   <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
-  <p><%= link_to 'Make a reservation', reservation_path %></p>
+  <p><%= link_to 'Make a reservation', reservation_path(restaurant) %></p>
 
   Address: <%= restaurant.address %>
   Capacity: <%= restaurant.capacity %>

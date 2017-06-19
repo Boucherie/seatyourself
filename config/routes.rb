@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   resources :restaurants
     resources :reservations
 
+  post 'users' => 'users#create'
+  get 'users/new' => 'users#new'
+
+  post 'sessions' => 'sessions#create'
+  get 'sessions/new' => 'sessions#new'
+
+  delete 'sessions' => 'sessions#destroy'
 end
