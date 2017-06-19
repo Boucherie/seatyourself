@@ -1,9 +1,12 @@
 <div class="restaurant">
   <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
-  <p><%= link_to 'Make a reservation', reservation_path(restaurant) %></p>
 
-  Address: <%= restaurant.address %>
-  Capacity: <%= restaurant.capacity %>
-  Open from : <%= restaurant.open_time %> to <%= restaurant.close_time %>
-  <%= link_to image_tag(restaurant.url, class: "restaurant"), restaurant_path(restaurant) %>
+  Address: <%= restaurant.address %><br>
+  <%= link_to image_tag(restaurant.url, class: "restaurant"), restaurant_path(restaurant) %><br>
+  Capacity      : <%= restaurant.capacity %> Persons<br>
+  Open from     : <%= restaurant.open_time %> to <%= restaurant.close_time %><br>
+  Price Range   : <%= restaurant.price_range %><br>
+  Neighbourhood : <%= restaurant.neighbourhood %><br>
+  Summary       : <%= restaurant.summary %>
+  <h1>---------------------------------------------------------------</h1>
 </div>
