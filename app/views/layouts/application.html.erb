@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Seatyourself</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Seatyourself</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+    <p class='userinfo'>
+      <% if current_user %>
+        Singed in as <%= current_user.email %>. <%= link_to "Log Out", sessions_path("current"), :method => :delete %>
+      <% else %>
+        <%= link_to "Log In", sessions_new_path %> or <%= link_to "Sign Up", users_new_path %>
+      <% end %>
+    </p>
+  </body>
 </html>
