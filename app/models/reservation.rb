@@ -6,6 +6,6 @@ class Reservation < ApplicationRecord
 
   validates :capacity, numericality: { only_interger: true, less_than_or_equal_to: 10 }
 
-  validates: :url, uniqueness: true
+  validates :url, uniqueness: true
 
 end

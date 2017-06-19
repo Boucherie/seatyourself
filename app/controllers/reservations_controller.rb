@@ -5,7 +5,7 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @reservation.new =Reservation.new
+    @reservation = Reservation.new
   end
 
   def create
