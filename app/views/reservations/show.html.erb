@@ -1,5 +1,5 @@
 <h1><%= @reservation.date %>, <%= @reservation.time %></h1>
-<%= render 'single_reservation', reservation: @reservation  %>
+<%= render 'single_reservation_form', reservation: @reservation  %>
 <%= link_to 'Edit', edit_reservation_path(@reservation) %>
 
 <%= link_to 'Delete', reservation_path(@reservation), method: :delete, data: {confirm: "Are you sure yoy want to delete the reservation at '#{@reservation.time}' on #{@reservation.date}? This cannot be undone!"} %>

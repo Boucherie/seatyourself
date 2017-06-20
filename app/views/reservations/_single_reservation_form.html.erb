@@ -1,7 +1,3 @@
 <div class="reservation">
-  <h3>Reservation: <%= reservation.name %></h3>
-  <%= link_to reservation.name, reservation_path(reservation) %>
-  <%= reservation.date %><br>
-  <%= reservation.time %><br>
-  <%= reservation.party_size %><br>
+  <p> Your reservation is set for <%= reservation.date %>, at <%= reservation.time %> for a party of <%= reservation.party_size %>.</p>
 </div>
