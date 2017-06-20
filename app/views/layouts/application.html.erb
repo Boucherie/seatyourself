@@ -12,7 +12,7 @@
 
     <p class='userinfo'>
       <% if current_user %>
-        Singed in as <%= current_user.email %>. <%= link_to "Log Out", sessions_path("current"), :method => :delete %>
+        Singed in as <%= current_user.email %>. <%= link_to "My Account"%> <%= link_to "Log Out", sessions_path("current"), :method => :delete %>
       <% else %>
         <%= link_to "Log In", new_sessions_path %> or <%= link_to "Sign Up", new_users_path %>
       <% end %>
