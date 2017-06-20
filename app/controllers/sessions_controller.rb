@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to restaurants_url, notice: "Logged In!"
     else
+      flash.now[:alert] = ["Login failed, email and/or password are incorrect!"]
       render "new"
     end
   end
