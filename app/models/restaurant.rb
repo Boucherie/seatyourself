@@ -10,7 +10,7 @@ class Restaurant < ApplicationRecord
   #validates :url, uniqueness: true
 
 
-  validates :name, :opening_hour, :closing_hour, presence: true
+  validates :name, :open_time, :close_time, presence: true
 
   belongs_to :category
   has_many :reservations
@@ -32,10 +32,10 @@ class Restaurant < ApplicationRecord
     start_time = Time.zone.at( (start_time.to_f / reservation_interval).ceil * reservation_interval )
     # Then, if we are still earlier than opening hour, just use the opening hour
     # We can use the 'max' Array method
-    start_time = [start_time, start_time.change(hour: opening_hour)].max
+    start_time = [start_time, start_time.change(hour: open_time)].max
 
     # Determine the furthest in the future we will allow reservations
-    end_time = (start_time + 3.days).change(hour: closing_hour)
+    end_time = (start_time + 3.days).change(hour: close_time)
 
     # Now, we want to make a list of every hour between our start_time and our end_time
     # For this we can use a begin... end while condition loop.
@@ -56,8 +56,8 @@ class Restaurant < ApplicationRecord
 
       # Once we get to closing time, we have to skip ahead to the next day's opening
       # That way you can't make a reservation at 2am
-      if (a_time + reservation_interval) > a_time.change(hour: closing_hour)
-        a_time = (a_time + 1.day).change(hour:opening_hour)
+      if (a_time + reservation_interval) > a_time.change(hour: close_time)
+        a_time = (a_time + 1.day).change(hour:open_time)
       end
 
     end while a_time < end_time
