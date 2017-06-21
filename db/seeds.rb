@@ -47,7 +47,7 @@ Restaurant.create(
   reservations_id: 1,
   owner_id: 1,
   url: 'http://i.imgur.com/AuyOIa4b.jpg',
-  price_range: '$$',
+  price_range: '80',
   neighbourhood: 'Downtown',
   summary: 'Fun food. Canadian food. From poutine to hamburgers.'
 )
@@ -61,7 +61,7 @@ Restaurant.create(
   reservations_id: 2,
   owner_id: 2,
   url: 'http://i.imgur.com/w8QyKOub.jpg',
-  price_range: '$$$',
+  price_range: '50',
   neighbourhood: 'Downtown',
   summary: 'Fancy food. Wince cellar, $100 dollar foie gras spaghetti.'
 )
@@ -75,7 +75,7 @@ Restaurant.create(
   reservations_id: 3,
   owner_id: 3,
   url: 'http://i.imgur.com/Kv43rafb.jpg',
-  price_range: '$',
+  price_range: '40',
   neighbourhood: 'Midtown',
   summary: 'Cheap eats. Mac and cheese, burgers, hot dogs, sandwhiches. Come hungry!'
 )

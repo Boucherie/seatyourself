@@ -21,14 +21,12 @@
 
   <p>
     <%= f.label :open_time %>
-    <%= f.time_field :open_time, :ignore_date => true %>
-    <!-- need to change time_field to select -->
+    <%= f.time_select :open_time, :ignore_date => true %>
   </p>
 
   <p>
     <%= f.label :close_time %>
-    <%= f.time_field :close_time, :ignore_date => true %>
-    <!-- need to change time_field to select -->
+    <%= f.time_select :close_time, :ignore_date => true %>
   </p>
 
   <p>
