@@ -1,14 +1,16 @@
 <div class="restaurant">
-  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+  <h2><%= restaurant.id %>. <%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
 
   Address: <%= restaurant.address %><br>
+  <br>
   <%= link_to image_tag(restaurant.url, class: "restaurant"), restaurant_path(restaurant) %><br>
+  <br>
   Capacity      : <%= restaurant.capacity %> Persons<br>
   Open from     : <%= restaurant.open_time %> to <%= restaurant.close_time %><br>
   Price Range   : <%= restaurant.price_range %><br>
   Neighbourhood : <%= restaurant.neighbourhood %><br>
-  Summary       : <%= restaurant.summary %>
-
+  Summary       : <%= restaurant.summary %><br>
+  <br>
   <%= link_to 'Make a Reservation', new_reservation_path %>
 
   <h1>---------------------------------------------------------------</h1>

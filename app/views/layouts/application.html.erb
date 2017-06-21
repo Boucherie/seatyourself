@@ -14,7 +14,7 @@
       <% if current_user %>
         Singed in as <%= current_user.email %>. <%= link_to "My Account"%> <%= link_to "Log Out", sessions_path("current"), :method => :delete %>
       <% else %>
-        <%= link_to "Log In", new_sessions_path %> or <%= link_to "Sign Up", new_users_path %>
+        <%= link_to "Log In", new_sessions_path %> | <%= link_to "Sign Up", new_users_path %>
       <% end %>
     </p>
   </body>
