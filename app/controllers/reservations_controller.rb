@@ -19,6 +19,7 @@ class ReservationsController < ApplicationController
         flash[:notice] = "You have successfully made a reservation"
         redirect_to reservation_path(@reservation.id)
       else
+        flash.now[:alert] = "Input incorrect or not present."
         redirect_to new_reservation_path
       end
   end

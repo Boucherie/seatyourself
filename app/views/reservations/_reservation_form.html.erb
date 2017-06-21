@@ -1,7 +1,8 @@
+
 <%= form_for reservation do |f| %>
   <p>
     <%= f.label :date %>
-    <%= f.date_field :date, min: Date.today %>
+    <%= f.date_field :date, min: Date.today, max: 60.days.from_now %>
   </p>
 
   <p>

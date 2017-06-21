@@ -6,6 +6,8 @@ class Reservation < ApplicationRecord
 
   validates :party_size, numericality: { only_interger: true, less_than_or_equal_to: 10 }
 
-  
+  #how do i validate something in another model
+
+
 
 end
